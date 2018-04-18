@@ -335,8 +335,6 @@
 			children = (
 				30F0AFB41C81B9B000CE5D18 /* Provider */,
 				30321F5B1C81759F008E5258 /* Api */,
-				285F1B641C5AF7B100A7E0DD /* AppDelegate.swift */,
-				28091E901C64B0B900E789CD /* Constants.swift */,
 				2818A9381C62301A00ECB57F /* Models */,
 				2818A9391C62305100ECB57F /* ViewModels */,
 				285F1B901C5B06A600A7E0DD /* Helpers */,
@@ -344,9 +342,8 @@
 				2818A9311C62300300ECB57F /* View Controllers */,
 				2818A93B1C62347A00ECB57F /* Protocols */,
 				2818A93C1C62348300ECB57F /* Storyboards */,
-				285F1B6D1C5AF7B100A7E0DD /* Assets.xcassets */,
-				285F1B721C5AF7B100A7E0DD /* Info.plist */,
-				285F1B801C5AFE3200A7E0DD /* Fossasia-Bridging-Header.h */,
+				4039027B208766CC00FF8F22 /* Assets */,
+				4039027C2087673900FF8F22 /* Supporting Files */,
 			);
 			path = FOSSAsia;
 			sourceTree = "<group>";
@@ -358,6 +355,7 @@
 				285F1B961C5B08FC00A7E0DD /* DateTools */,
 				2859B0FF1C5DFD09009656FC /* Colors.swift */,
 				28A0BC6E1C5F42D6001625FB /* Error.swift */,
+				28091E901C64B0B900E789CD /* Constants.swift */,
 				285F1B8E1C5B069D00A7E0DD /* Observable.swift */,
 				285F1B781C5AFBBB00A7E0DD /* SwiftHEXColors.swift */,
 			);
@@ -415,6 +413,24 @@
 				30F0AFB71C81C4C600CE5D18 /* SettingsManager.swift */,
 			);
 			name = Provider;
+			sourceTree = "<group>";
+		};
+		4039027B208766CC00FF8F22 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				285F1B6D1C5AF7B100A7E0DD /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		4039027C2087673900FF8F22 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				285F1B641C5AF7B100A7E0DD /* AppDelegate.swift */,
+				285F1B721C5AF7B100A7E0DD /* Info.plist */,
+				285F1B801C5AFE3200A7E0DD /* Fossasia-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8C4556AD4F10E8C1FF0495B8 /* Pods */ = {
