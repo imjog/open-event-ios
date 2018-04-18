@@ -14,23 +14,23 @@ class LoadingViewController: UIViewController {
         static let viewControllerId = String(describing: LoadingViewController.self)
     }
     lazy var loadAnimating = true
-    
+
     @IBOutlet weak var loadingImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 //        self.spinLoadingIndicatorWithOptions(UIViewAnimationOptions())
 
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+
         // moved spinLoadingIndicatorWithOptions from viewDidLoad to viewDidAppear
         self.spinLoadingIndicatorWithOptions(UIViewAnimationOptions())
     }
-    
+
     fileprivate func spinLoadingIndicatorWithOptions(_ options: UIViewAnimationOptions) {
-        
+
         UIView.animate(withDuration: 0.15, delay: 0, options: options, animations: { () -> Void in
             self.loadingImageView.transform = self.loadingImageView.transform.rotated(by: CGFloat(Double.pi / 2))
             }) { (finished) -> Void in

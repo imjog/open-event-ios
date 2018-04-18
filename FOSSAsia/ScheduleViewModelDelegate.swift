@@ -20,7 +20,7 @@ extension ScheduleViewController {
             self.present(alert, animated: true, completion: nil)
             return
         }
-        
+
         let now = Date()
         let updateString = "Last updated: " + (now as NSDate).formattedDate(withFormat: "dd MMMM yyyy, HH:mm:ss", locale: Locale.autoupdatingCurrent)
         self.refreshControl.attributedTitle = NSAttributedString(string: updateString)

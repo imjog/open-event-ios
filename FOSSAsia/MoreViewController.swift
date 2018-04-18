@@ -9,7 +9,7 @@
 import UIKit
 import SafariServices
 
-fileprivate struct DefaultURLs {
+private struct DefaultURLs {
     static let fossasia2018 = "https://2018.fossasia.org/"
     static let fossaisaTwitter = "https://twitter.com/fossasia"
     static let fossasiaItune = "https://itunes.apple.com/us/app/fossasia/id1089164461?ls=1&mt=8"
@@ -22,7 +22,7 @@ class MoreViewController: UITableViewController {
         guard (indexPath as NSIndexPath).section == 0 else {
             return
         }
-        
+
         switch (indexPath as NSIndexPath).row {
         case 0:
             self.present(self.createSVC(DefaultURLs.fossasia2018), animated: true, completion: nil)
@@ -34,7 +34,7 @@ class MoreViewController: UITableViewController {
             let alertController = UIAlertController(title: Constants.appStoreAlertTitle, message: Constants.appStoreAlertMessage, preferredStyle: .alert)
             let openAction = UIAlertAction(title: Constants.okTitle, style: .default, handler: { (action) -> Void in
                 let itunesLink = DefaultURLs.fossasiaItune
-                if let url = URL(string: itunesLink){
+                if let url = URL(string: itunesLink) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             })
@@ -44,7 +44,7 @@ class MoreViewController: UITableViewController {
             alertController.addAction(openAction)
             alertController.addAction(cancelAction)
             self.present(alertController, animated: true, completion: { () -> Void in
-                
+
             })
 
             break
@@ -55,7 +55,7 @@ class MoreViewController: UITableViewController {
             break
         }
     }
-    
+
     func createSVC(_ urlString: String) -> SFSafariViewController {
         return SFSafariViewController(url: URL(string: urlString)!)
     }

@@ -49,4 +49,3 @@ struct Constants {
         static let navbarFave = "navbar_fave"
     }
 }
-
