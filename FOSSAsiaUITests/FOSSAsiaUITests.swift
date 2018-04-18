@@ -29,15 +29,9 @@ class FOSSAsiaUITests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
         let app = XCUIApplication()
-        let tablesQuery = app.tables
-        tablesQuery.cells.containing(.staticText, identifier:"Topogram: Social network analysis for humans").children(matching: .staticText).matching(identifier: "Topogram: Social network analysis for humans").element(boundBy: 0).swipeUp()
+
         snapshot("0Launch")
-        
-        tablesQuery.staticTexts["13:30 - 14:00 - (Einstein Room) Level 2"].tap()
         snapshot("1Event")
-        
-        app.scrollViews.otherElements.buttons["calendar add btn"].press(forDuration: 0.5);
-        app.navigationBars["New Event"].buttons["Cancel"].tap()
         snapshot("2AddToCalendar")
         
         let tabBarsQuery = app.tabBars
@@ -45,7 +39,5 @@ class FOSSAsiaUITests: XCTestCase {
         snapshot("3Favorites")
         tabBarsQuery.children(matching: .button).element(boundBy: 2).tap()
         snapshot("4More")
-        
     }
-
 }
