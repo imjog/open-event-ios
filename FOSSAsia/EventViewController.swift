@@ -16,15 +16,15 @@ class EventViewController: UIViewController {
     
     // Constants for Storyboard/VC
     struct StoryboardConstants {
-        static let storyboardName = "IndividualEvent"
-        static let viewControllerId = "EventViewController"
+        static let storyboardName = Constants.individualEventStoryboard
+        static let viewControllerId = Constants.eventViewControllerID
     }
     
     // MARK:- Properties
     var eventViewModel: EventViewModel? {
         didSet {
             eventViewModel?.favorite.observe({ (newValue) -> Void in
-                self.navBarButtonItem.image = newValue ? UIImage(named: "navbar_fave_highlighted") : UIImage(named: "navbar_fave")
+                self.navBarButtonItem.image = newValue ? UIImage(named: Constants.Images.navbarFaveHighlighted) : UIImage(named: Constants.Images.navbarFave)
             })
         }
     }

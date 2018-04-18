@@ -101,7 +101,7 @@ struct EventViewModel: EventTypePresentable, EventDetailsPresentable, EventDescr
         // Trigger notification
         let triggerDate = (self.startDateTime.value as Date).addingTimeInterval(-15*60)
         let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.minute,.hour,.day], from: triggerDate), repeats: false)
-        let identifier = "LocalNotification"
+        let identifier = Constants.localNotificationIdentifier
         let request = UNNotificationRequest(identifier: identifier, content: localNotificationContent, trigger: trigger)
         center.add(request, withCompletionHandler: { (error) in
             if error != nil {

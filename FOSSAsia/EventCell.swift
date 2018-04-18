@@ -39,7 +39,7 @@ class EventCell: MGSwipeTableCell {
         
         if selected {
             typeView.backgroundColor = color
-            self.contentView.backgroundColor = UIColor(hexString: "FFF5F5")
+            self.contentView.backgroundColor = Colors.highlightedBackgroundColor
         }
     }
     
@@ -50,7 +50,7 @@ class EventCell: MGSwipeTableCell {
         if highlighted {
             typeView.backgroundColor = color
         
-            self.contentView.backgroundColor = UIColor(hexString: "FFF5F5")
+            self.contentView.backgroundColor = Colors.highlightedBackgroundColor
         }
     }
     

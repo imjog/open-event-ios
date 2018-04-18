@@ -10,7 +10,7 @@ import UIKit
 
 class LoadingViewController: UIViewController {
     struct StoryboardConstants {
-        static let storyboardName = "Sessions"
+        static let storyboardName = Constants.sessionsStoryboardName
         static let viewControllerId = String(describing: LoadingViewController.self)
     }
     lazy var loadAnimating = true

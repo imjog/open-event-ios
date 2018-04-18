@@ -78,21 +78,21 @@ struct EventProvider {
                     }
                     
                     for session in sessionsArray {
-                        guard let trackId = session["track"]["id"].int,
-                            let sessionId = session["session_id"].string,
-                            let sessionTitle = session["title"].string,
-                            let sessionDescription = session["description"].string,
-                            let sessionLocation = session["location"].string,
-                            let sessionSpeakers = session["speakers"].array,
-                            let sessionStartDateTime = session["start_time"].string,
-                            let sessionEndDateTime = session["end_time"].string else {
+                        guard let trackId = session[Constants.Sessions.track][Constants.Sessions.id].int,
+                            let sessionId = session[Constants.Sessions.sessionId].string,
+                            let sessionTitle = session[Constants.Sessions.title].string,
+                            let sessionDescription = session[Constants.Sessions.description].string,
+                            let sessionLocation = session[Constants.Sessions.location].string,
+                            let sessionSpeakers = session[Constants.Sessions.speakers].array,
+                            let sessionStartDateTime = session[Constants.Sessions.startTime].string,
+                            let sessionEndDateTime = session[Constants.Sessions.endTime].string else {
                                 continue
                         }
                         
                         var sessionSpeakersNames: [Speaker] = []
                         
                         for speaker in sessionSpeakers {
-                            guard let speakerName = speaker["name"].string else { continue }
+                            guard let speakerName = speaker[Constants.Sessions.speakerName].string else { continue }
                             let name = speakerName
                             sessionSpeakersNames.append(Speaker(name: name))
                         }

@@ -11,7 +11,7 @@ import Foundation
 typealias ApiRequestCompletionHandler = (Data?, Error?) -> Void
 
 struct ApiClient {
-//    static let url = "https://raw.githubusercontent.com/fossasia/open-event/master/testapi/event/1/"
+
     static let url = "https://raw.githubusercontent.com/fossasia/2016.fossasia.org/gh-pages/schedule/"
     
     let eventInfo: EventInfo
@@ -46,7 +46,7 @@ struct ApiClient {
     }
 
     fileprivate func getUrl(_ eventInfo: EventInfo) -> String {
-       return ApiClient.url + eventInfo.rawValue + ".json"
+       return ApiClient.url + eventInfo.rawValue + Constants.jsonFileExtension
     }
     
     fileprivate func processResponse(_ data: Data, completionHandler: CommitmentCompletionHandler) {
