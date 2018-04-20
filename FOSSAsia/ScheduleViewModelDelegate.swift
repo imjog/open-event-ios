@@ -25,9 +25,9 @@ extension ScheduleViewController {
         let updateString = "Last updated: " + (now as NSDate).formattedDate(withFormat: "dd MMMM yyyy, HH:mm:ss", locale: Locale.autoupdatingCurrent)
         self.refreshControl.attributedTitle = NSAttributedString(string: updateString)
         if self.refreshControl.isRefreshing {
-            OperationQueue.main.addOperation({ [unowned self] () -> Void in
+            DispatchQueue.main.async {
                 self.refreshControl.endRefreshing()
-            })
+            }
         }
     }
 }
