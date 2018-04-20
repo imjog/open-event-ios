@@ -15,7 +15,7 @@ class ScheduleViewController: EventsBaseViewController, SwipeToFavoriteCellPrese
     // Constants for Storyboard/VC
     struct StoryboardConstants {
         static let storyboardName = "ScheduleVC"
-        static let viewControllerId = String(describing: ScheduleViewController())
+        static let viewControllerId = String(describing: ScheduleViewController.self)
     }
 
     lazy var filteredEvents: [EventViewModel] = self.allEvents

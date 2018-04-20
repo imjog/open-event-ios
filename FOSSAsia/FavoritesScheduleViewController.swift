@@ -17,7 +17,7 @@ class FavoritesScheduleViewController: EventsBaseViewController, SwipeToFavorite
 
     struct StoryboardConstants {
         static let storyboardName = "ScheduleVC"
-        static let viewControllerId = String(describing: FavoritesScheduleViewController())
+        static let viewControllerId = String(describing: FavoritesScheduleViewController.self)
     }
 
     override func viewDidLoad() {
